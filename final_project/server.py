@@ -25,7 +25,7 @@ def render_index_page():
     """
     Accept request and return index page
     """
-    return render_template("static/index.html", title='Translation')
+    return render_template("index.html")
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8080)
