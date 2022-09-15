@@ -11,14 +11,22 @@ def english_to_french():
     """
     Accept request and return translated text
     """
-    return translator.english_to_french(request.args.get('textToTranslate'))
+    text = translator.english_to_french(request.args.get('textToTranslate'))
+    if text is None:
+        return "Please supply a valid text string to translate"
+    else:
+        return text
 
 @app.route("/frenchToEnglish")
 def french_to_english():
     """
     Accept request and return translated text
     """
-    return translator.french_to_english(request.args.get('textToTranslate'))
+    text = translator.french_to_english(request.args.get('textToTranslate'))
+    if text is None:
+        return "Please supply a valid text string to translate"
+    else:
+        return text
 
 @app.route("/")
 def render_index_page():

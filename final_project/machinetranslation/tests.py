@@ -5,7 +5,6 @@ import unittest
 
 from translator import english_to_french, french_to_english
 
-
 class TestEnglishToFrench(unittest.TestCase):
     """
     Tests for english text translation
@@ -34,7 +33,6 @@ class TestEnglishToFrench(unittest.TestCase):
         Test valid string is translated correctly
         """
         self.assertNotEqual(english_to_french('Hello'), 'Néant')
-
 
 class TestFrenchToEnglish(unittest.TestCase):
     """
